@@ -27,7 +27,10 @@ jobs:
           name: notredoc
 
   deploy:
-    runs-on: self-hosted
+    runs-on: 
+      - self-hosted
+      - preprod
+
     needs: build
     steps:
       - uses: actions/download-artifact@v4
