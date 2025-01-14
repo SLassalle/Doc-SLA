@@ -1,5 +1,5 @@
 ---
-name: Upload de github pages
+name: Test
 
 on:
   workflow_dispatch:
@@ -13,3 +13,5 @@ jobs:
 
     steps:
       - run: echo $MSG
+        env:
+          MSG: ${{ vars.MSG }}
